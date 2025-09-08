@@ -49,7 +49,7 @@
                FontSize="16" 
                HorizontalAlignment="Left"/>
 
-        <TextBox Grid.Row="3" Grid.Column="1"
+        <TextBox x:Name="from" Grid.Row="3" Grid.Column="1"
                  TextWrapping="Wrap" 
                  Width="333" 
                  Height="37"
@@ -61,7 +61,7 @@
                FontSize="16" 
                HorizontalAlignment="Left"/>
 
-        <TextBox Grid.Row="5" Grid.Column="1"
+        <TextBox x:Name="to" Grid.Row="5" Grid.Column="1"
                  TextWrapping="Wrap" 
                  Width="334" 
                  Height="37"
@@ -74,6 +74,6 @@
                 Content="Найти" 
                 Background="#FF4008"
                 HorizontalAlignment="Right"
-                Margin="0,0,0,20"/>
+                Margin="0,0,0,20" Click="Search"/>
     </Grid>
 </Page>

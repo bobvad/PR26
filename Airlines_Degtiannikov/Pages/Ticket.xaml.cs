@@ -13,26 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Airlines_Degtiannikov
+namespace Airlines_Degtiannikov.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для Ticket.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Ticket : Page
     {
-        public static MainWindow init;
-        public MainWindow()
+        public Ticket(string From, string To)
         {
             InitializeComponent();
-            init = this;  
-        }
-        public void OpenPages(Page Page)
-        {
-            frame.Navigate(Page);
-        }
-        private void Exit_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
         }
     }
 }
