@@ -1,0 +1,79 @@
+﻿<Page x:Class="Airlines_Degtiannikov.Pages.Main"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Airlines_Degtiannikov.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Main">
+
+    <Grid Background="#FF0C73FF">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="0" Grid.Column="1"
+               Content="Поиск дешевых авиабилетов" 
+               Foreground="White" 
+               Margin="0,60,0,20"
+               FontSize="20" 
+               FontWeight="Bold"
+               HorizontalAlignment="Center"/>
+
+        <!-- Подзаголовок -->
+        <Label Grid.Row="1" Grid.Column="1"
+               Content="Лучший способ купить авиабилеты дёшево" 
+               Foreground="White" 
+               Margin="0,0,0,40"
+               FontSize="16" 
+               HorizontalAlignment="Center"/>
+
+        <!-- Поле "Откуда" -->
+        <Label Grid.Row="2" Grid.Column="1"
+               Content="Откуда:" 
+               Foreground="White" 
+               Margin="0,0,0,10"
+               FontSize="16" 
+               HorizontalAlignment="Left"/>
+
+        <TextBox Grid.Row="3" Grid.Column="1"
+                 TextWrapping="Wrap" 
+                 Width="333" 
+                 Height="37"
+                 Margin="0,0,0,20"/>
+        <Label Grid.Row="4" Grid.Column="1"
+               Content="Куда:" 
+               Foreground="White" 
+               Margin="0,0,0,10"
+               FontSize="16" 
+               HorizontalAlignment="Left"/>
+
+        <TextBox Grid.Row="5" Grid.Column="1"
+                 TextWrapping="Wrap" 
+                 Width="334" 
+                 Height="37"
+                 Margin="0,0,0,30"/>
+
+        <Button Grid.Row="6" Grid.Column="1"
+                Width="100" 
+                Height="35"
+                Foreground="White" 
+                Content="Найти" 
+                Background="#FF4008"
+                HorizontalAlignment="Right"
+                Margin="0,0,0,20"/>
+    </Grid>
+</Page>
