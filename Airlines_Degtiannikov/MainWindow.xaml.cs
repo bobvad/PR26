@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Airlines_Degtiannikov.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,15 +25,12 @@ namespace Airlines_Degtiannikov
         public MainWindow()
         {
             InitializeComponent();
-            init = this;  
-        }
-        public void OpenPages(Page Page)
-        {
-            frame.Navigate(Page);
+            init = this;
+            frame.Navigate(new Pages.Main()); 
         }
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            init.frame.Navigate(new Pages.Main());
         }
     }
 }

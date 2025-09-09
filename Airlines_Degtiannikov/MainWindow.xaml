@@ -5,13 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Airlines_Degtiannikov"
         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
         Title="MainWindow" Height="450" Width="800"  MinHeight="450" MinWidth="800">
     <Grid>
         <Grid Height="70" VerticalAlignment="Top" Background="#FF0C73FF">
-            <Image Width="50" Height="50" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,10,10,10"/>
-            <Label VerticalAlignment="Top" HorizontalAlignment="Left" Content="Управление авиалиниями" Foreground="White" Margin="54,20,0,0" FontSize="16" FontWeight="Bold"/>
-            <Button x:Name="Exit" VerticalAlignment="Top" HorizontalAlignment="Right" Width="100" Height="25" Content="Выйти" Margin="0,10,10,0" Background="White" Click="Exit_Click"/>
+            <Image Source="/Images/Plane.png" Width="60" Height="36" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="1,0,0,0" RenderTransformOrigin="0.5,0.5">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Label VerticalAlignment="Top" HorizontalAlignment="Left" Content="Управление авиалиниями" Foreground="White" Margin="75,16,0,0" FontSize="16" FontWeight="Bold"/>
+
         </Grid>
-        <Frame x:Name="frame" NavigationUIVisibility="Hidden" Navigated="frame_Navigated"/>
+        <Button x:Name="Exit" VerticalAlignment="Top" HorizontalAlignment="Right" Width="100" Height="26" Content="Выйти" Margin="0,6,25,0" Background="White" Click="Exit_Click"/>
+        <Frame x:Name="frame" NavigationUIVisibility="Hidden" />
     </Grid>
 </Window>

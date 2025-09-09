@@ -5,11 +5,12 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Airlines_Degtiannikov.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      Height="450" Width="800"  MinHeight="450" MinWidth="800"
       Title="Ticket">
-
-    <Grid Background="#FF0C73FF">
-        <ScrollViewer>
+    <Grid>
+      
+        <Frame x:Name="frame" NavigationUIVisibility="Hidden" />
+        <ScrollViewer Margin="0,71,0,0">
             <StackPanel x:Name="parent">
                 
             </StackPanel>

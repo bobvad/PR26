@@ -20,6 +20,7 @@ namespace Airlines_Degtiannikov.Pages
     /// </summary>
     public partial class Main : Page
     {
+        MainWindow mainWindow;
         public Main()
         {
             InitializeComponent();
@@ -27,7 +28,12 @@ namespace Airlines_Degtiannikov.Pages
 
         private void Search(object sender, RoutedEventArgs e)
         {
-            MainWindow.init.OpenPages(new Pages.Ticket(from.Text,to.Text));
+            MainWindow.init.frame.Navigate(new Pages.Ticket(from.Text,to.Text));
+        }
+
+        private void Exit_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
         }
     }
 }

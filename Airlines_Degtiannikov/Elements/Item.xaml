@@ -4,28 +4,46 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Airlines_Degtiannikov.Elements"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             mc:Ignorable="d" Height="132" Width="765">
     <Grid Background="#E4E4E4">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="120"/>
-            <ColumnDefinition Width="106"/>
+            <ColumnDefinition Width="134"/>
+            <ColumnDefinition Width="92"/>
             <ColumnDefinition Width="436"/>
             <ColumnDefinition Width="458"/>
         </Grid.ColumnDefinitions>
-        <Label Content="1999 ₽" Margin="22,10,22,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontSize="22" Height="37"/>
-        <Button Content="Подробнее" Margin="10,52,10,0" VerticalAlignment="Top" Height="25" Background="#FF4000" Foreground="White"/>
+        <Label x:Name="lPrice" Content="1999 ₽" Margin="22,8,22,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontSize="22" Height="37"/>
+        <Button Content="Подробнее" Margin="16,52,10,0" VerticalAlignment="Top" Height="25" Background="#FF4000" Foreground="White"/>
         <Label Grid.Column="1" Content="Победа" HorizontalAlignment="Left" Margin="8,12,0,0" VerticalAlignment="Top" Width="81" Height="26" />
-        <Label Grid.Column="1" Content="05:00" HorizontalAlignment="Left" Margin="9,37,0,0" VerticalAlignment="Top" FontSize="15" Height="30" Width="46"/>
-        <Label Grid.Column="1" Content="09.12.2025" HorizontalAlignment="Left" Margin="10,67,0,0" VerticalAlignment="Top" Height="26" Width="67"/>
-        <Label Grid.Column="1" Content="Пермь" HorizontalAlignment="Left" Margin="11,96,0,0" VerticalAlignment="Top" Height="26" Width="46"/>
+        <Label x:Name="fromTime" Grid.Column="1" Content="05:00" HorizontalAlignment="Left" Margin="9,37,0,0" VerticalAlignment="Top" FontSize="15" Height="30" Width="46"/>
+        <Label x:Name="fromDate" Grid.Column="1" Content="09.12.2025" HorizontalAlignment="Left" Margin="10,67,0,0" VerticalAlignment="Top" Height="26" Width="67"/>
+        <Label x:Name="from" Grid.Column="1" Content="Пермь" HorizontalAlignment="Left" Margin="11,96,0,0" VerticalAlignment="Top" Height="26" Width="67"/>
 
-        <Grid Grid.Column="2" Background="#939393" Margin="9,77,10,368"/>
-
+        <Grid Grid.Column="2" Background="#939393" Margin="9,77,10,52"/>
         <Label Grid.Column="3" Content="Победа" HorizontalAlignment="Left" Margin="24,10,0,0" VerticalAlignment="Top" Width="81" Height="26" />
-        <Label Grid.Column="3" Content="05:00" HorizontalAlignment="Left" Margin="25,37,0,0" VerticalAlignment="Top" FontSize="15" Height="30" Width="46"/>
-        <Label Grid.Column="3" Content="09.12.2025" HorizontalAlignment="Left" Margin="25,67,0,0" VerticalAlignment="Top" Height="26" Width="67"/>
-        <Label Grid.Column="3" Content="Москва" HorizontalAlignment="Left" Margin="26,94,0,0" VerticalAlignment="Top" Height="26" Width="51"/>
-        <Label Grid.Column="2" Content="В пути 4 часа 55 минут" HorizontalAlignment="Left" Margin="146,47,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="toTime" Grid.Column="3" Content="05:00" HorizontalAlignment="Left" Margin="25,37,0,0" VerticalAlignment="Top" FontSize="15" Height="30" Width="46"/>
+        <Label x:Name="toDate" Grid.Column="3" Content="09.12.2025" HorizontalAlignment="Left" Margin="25,67,0,0" VerticalAlignment="Top" Height="26" Width="67"/>
+        <Label x:Name="to" Grid.Column="3" Content="Москва" HorizontalAlignment="Left" Margin="26,94,0,0" VerticalAlignment="Top" Height="26" Width="65"/>
+        <Image Source="/Images/Plane.png" Width="28" Height="18" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="11,49,0,0" RenderTransformOrigin="0.5,0.5" Grid.Column="2">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image Source="/Images/Plane.png" Width="21" Height="17" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="391,52,0,0" RenderTransformOrigin="0.5,0.5" Grid.Column="2">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="39.936"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Label x:Name="way" Grid.Column="2" Content="В пути 4 часа 55 минут" HorizontalAlignment="Left" Margin="146,47,0,0" VerticalAlignment="Top" Height="26" Width="135"/>
     </Grid>
 </UserControl>
